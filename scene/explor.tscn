@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=3 uid="uid://d2adai48g5lby"]
+
+[ext_resource type="Texture2D" uid="uid://cm4v2ie5frnhn" path="res://game assect/PNG/Sprites/Bombs/Bomb_1_Explosion_005.png" id="1_tbc4h"]
+[ext_resource type="Texture2D" uid="uid://bj71hmy8fvi8l" path="res://game assect/PNG/Sprites/Bombs/Bomb_1_Explosion_004.png" id="2_rsq6k"]
+[ext_resource type="Texture2D" uid="uid://ov6ip1qrse8f" path="res://game assect/PNG/Sprites/Bombs/Bomb_1_Explosion_003.png" id="3_1utoi"]
+[ext_resource type="Texture2D" uid="uid://rc0xqflllgox" path="res://game assect/PNG/Sprites/Bombs/Bomb_1_Explosion_006.png" id="4_b6kka"]
+[ext_resource type="Texture2D" uid="uid://cruwu38hgua8n" path="res://game assect/PNG/Sprites/Bombs/Bomb_1_Explosion_007.png" id="5_rr25r"]
+[ext_resource type="Texture2D" uid="uid://yjj5t27wtc1k" path="res://game assect/PNG/Sprites/Bombs/Bomb_1_Explosion_008.png" id="6_kd852"]
+[ext_resource type="Script" uid="uid://ds150q0uha4b" path="res://spripts/explor.gd" id="7_rsq6k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nr1oh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tbc4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rsq6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1utoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rsq6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_tbc4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_b6kka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rr25r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kd852")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="explor" type="AnimatedSprite2D"]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_nr1oh")
+autoplay = "default"
+frame = 7
+frame_progress = 1.0
+script = ExtResource("7_rsq6k")
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

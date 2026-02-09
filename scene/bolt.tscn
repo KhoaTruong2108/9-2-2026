@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cllivjfvjvtq0"]
+[gd_scene load_steps=8 format=3 uid="uid://cllivjfvjvtq0"]
 
 [ext_resource type="Texture2D" uid="uid://ch3unp2bosegs" path="res://game assect/Warped shooting fx files/Pixelart/Bolt/frames/bolt1.png" id="1_rb36i"]
 [ext_resource type="Script" uid="uid://x83reumhhs3b" path="res://spripts/bolt.gd" id="1_ys23d"]
@@ -26,6 +26,9 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ys23d"]
+size = Vector2(32, 20)
+
 [node name="bolt" type="Node2D"]
 rotation = 1.5707964
 script = ExtResource("1_ys23d")
@@ -34,3 +37,12 @@ script = ExtResource("1_ys23d")
 sprite_frames = SubResource("SpriteFrames_du1bk")
 autoplay = "default"
 frame_progress = 0.9875793
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-6, 0)
+shape = SubResource("RectangleShape2D_ys23d")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

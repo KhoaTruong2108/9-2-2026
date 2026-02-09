@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://prsraq5a1427"]
+[gd_scene load_steps=5 format=3 uid="uid://prsraq5a1427"]
 
 [ext_resource type="Texture2D" uid="uid://12ypn0ws6lgx" path="res://game assect/Nebula Aqua-Pink.png" id="1_tw77e"]
 [ext_resource type="PackedScene" uid="uid://caa8ccd0ufr83" path="res://scene/player.tscn" id="2_rpurj"]
+[ext_resource type="PackedScene" uid="uid://dyk3at26rvwg1" path="res://scene/enemy_1.tscn" id="3_3flxk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rpurj"]
 size = Vector2(1168, 20)
@@ -35,3 +36,10 @@ shape = SubResource("RectangleShape2D_rpurj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(574, 0)
 shape = SubResource("RectangleShape2D_rpurj")
+
+[node name="enemy_1" parent="." instance=ExtResource("3_3flxk")]
+position = Vector2(1063, 128)
+rotation = -3.1415925
+
+[node name="enemy_2" parent="." instance=ExtResource("3_3flxk")]
+position = Vector2(84, 127)

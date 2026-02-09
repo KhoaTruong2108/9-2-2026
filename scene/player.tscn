@@ -7,7 +7,7 @@
 atlas = ExtResource("1_xo3ru")
 region = Rect2(1110, 1278, 914, 730)
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_hjaqi")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
