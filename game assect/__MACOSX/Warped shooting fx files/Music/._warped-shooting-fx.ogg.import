@@ -1,0 +1,18 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bemwmvku8vs8l"
+valid=false
+
+[deps]
+
+source_file="res://game assect/__MACOSX/Warped shooting fx files/Music/._warped-shooting-fx.ogg"
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
